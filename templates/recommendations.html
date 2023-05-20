@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css') }}">
+
+    <title>Movie Recommendation System</title>
+</head>
+
+<body>
+    {% block content %}
+    <div class="Recommendation-body">
+
+        <div class="upper">
+            <h1 class="upper_text"><span class="span" style="color: rgba(255,255,255,0.6)">Recommendations for</span> {{movie_name}}</h1>
+        </div>
+        <!--card start-->
+        <div class="main">
+                {% for movie in recommended_movies %}
+                    {% if movie['Title'] %}
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front" style="border-radius: 20px;">
+                                {% if movie['Poster'] == "N/A" %}
+                                    <img src="/static/css/images/1595.jpg" alt="" style="width: 100%; height: 100%">
+                                {% else %}
+                                    <img src="{{movie['Poster']}}" alt="" style="width: 100%; height: 100%">
+                                {% endif %}
+                            </div>
+                            <div class="flip-card-back">
+                                <h2> {{ movie['Title'] }}</h2>
+                                <br>
+                                <p>{{ movie['Released'] }}</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+            <!--card end-->
+    {% endblock %}
+</body>
+</html>

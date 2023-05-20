@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css') }}">
+    <title>Movie Recommendation System</title>
+</head>
+<body>
+    <div class="root" style="height: 100%; width: 100%;">
+        <nav class="navbar">
+            <img src="" alt="" class="img-logo">
+        </nav>
+        <div class="main-container">
+            <div class="main-title-container">
+                <h1 class="main-title">Finished one? go for another one</h1>
+                <h2 class="second-title">Anytime, Anywhere</h2>
+                <p class="third-title">Search your favourite entertainment</p>
+            </div>
+            <div class="container">
+                <form action="http://localhost:5000/recommend" method="post">
+                    <input type="text" placeholder="Search..." name="movie_name" class="input">
+                    <button class="btn">Go ahead</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+

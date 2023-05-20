@@ -1,0 +1,100 @@
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+  .root{
+    background-image: radial-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.8)),
+    url('../css/images/assortment-cinema-elements-red-background-with-copy-space.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .img-logo{
+    width: 14%;
+  }
+
+  .navbar{
+     height: 10vh;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding-left: 2vw;
+     padding-right: 4vw;
+     padding-top: 1%;
+  }
+
+  .main-container{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:start;
+    align-items:center;
+    padding-top: 140px;
+  }
+
+  .main-title-container{
+    color: white;
+    text-align: center;
+    width: 60%;
+  }
+
+  .main-title{
+    font-weight:900;
+    font-size: 2.5em;
+    margin-bottom: 2px;
+  }
+
+  .second-title{
+    font-size: 2em;
+    margin-bottom: 14px;
+    font-weight:500;
+  }
+
+  .third-title{
+    font-size: 1em;
+    margin-bottom: 35px;
+  }
+
+  .container{
+    width: 48%;
+    height: 10px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+  }
+
+  .input{
+    outline: none;
+    border: none;
+    padding: 10px;
+    padding-top: 12px;
+    padding-left: 10px;
+    margin-right: 6px;
+    padding-right: 270px;
+    font-size: 1em;
+    border-radius: 1.625rem;
+  }
+
+  .btn{
+    cursor: pointer;
+    padding: 7px 32px;
+    padding-bottom: 10px;
+    /* height: fit-content; */
+    background-color: #e73232;
+    color: white;
+    font-size: 1.4em;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 1.625rem;
+  }
+
+  .btn:hover{
+   
+    background-color:  #891010;;
+    transition: 0.3s;
+  }
